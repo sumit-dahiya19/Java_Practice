@@ -7,8 +7,8 @@ class Math {
 
     void show()
     {
-        System.out.println("a is :"+this.a);
-        System.out.println("b is :"+this.b);
+        System.out.println("a is :"+ a);
+        System.out.println("b is :"+ b);
     }
     Math(int a, int b)
     {
@@ -17,69 +17,69 @@ class Math {
     }
     public void add()
     {
-        System.out.println(this.a+this.b);
+        System.out.println( a+ b);
     }
     public void subtract()
     {
-        if(this.a-this.b<0)
-            System.out.println(this.b-this.a);
+        if( a- b<0)
+            System.out.println( b- a);
         else
-            System.out.println(this.a-this.b);
+            System.out.println( a- b);
     }
     public void multiply()
     {
-        System.out.println(this.a*this.b);
+        System.out.println( a* b);
     }
     public void divide()
     {
-        if(this.b==0)
+        if( b==0)
             System.out.println("Zero division Error");
         else
-        System.out.println(this.a/this.b);
+            System.out.println( a/b );
     }
     public int conditionalOperation()
     {
-        if(this.a<this.b)
+        if( a< b)
         {
-            return (this.a+this.b);
+            return ( a+b);
         }
-        else if (this.a>this.b)
-        {
-            return(this.a-this.b);
-        }
-        else if(this.a == this.b)
-        {
-            return (this.a*this.b);
-        }
-        else if ( (this.a>this.b) &&   (this.b!=0))
-        {
-            return (this.a/this.b);
-        }
-      
+        else if ( a>b )
+    {
+        return( a-b );
+    }
+    else if( a ==  b)
+    {
+        return ( a* b );
+    }
+    else if ( ( a> b) &&   ( b!=0))
+    {
+        return ( a/ b);
+    }
+
         /*int i=-1;
-        if(this.a<this.b) i=1;
-        if(this.a>this.b)i=2;
-        if(this.a==this.b)i=3;
-        if(this.a>this.b && (this.b!=0))i=4;
+        if( a< b) i=1;
+        if( a> b)i=2;
+        if( a== b)i=3;
+        if( a> b && ( b!=0))i=4;
 
         switch(i)
         {
-            case 1:return this.a+this.b;
-            case 2:return this.a-this.b;
-            case 3:return this.a*this.b;
-            case 4:return this.a/this.b;
+            case 1:return  a+ b;
+            case 2:return  a- b;
+            case 3:return  a* b;
+            case 4:return  a/ b;
         }*/
-     return -1;
+        return -1;
     }
     public int Sum()
     {
         int sum=0;
-        for(int i=this.a;i<=this.b;i++)
+        for(int i= a;i<= b;i++)
         {
             sum+=i;
         }
-        /*int i=this.a;
-        while(i<=this.b)
+        /*int i= a;
+        while(i<= b)
         {
             sum+=i;
             i++;
@@ -90,13 +90,13 @@ class Math {
 public class Main{
     public static void main(String [] args)
     {
-        Math obj=new Math(5,10);
+        Math obj=new Math(10,1);
         obj.show();
-        //obj.add();
-        //obj.subtract();
-        //obj.divide();
-        //obj.multiply();
-        //System.out.println(obj.conditionalOperation());
+        obj.add();
+        obj.subtract();
+        obj.divide();
+        obj.multiply();
+        System.out.println(obj.conditionalOperation());
         System.out.println(obj.Sum());
 
     }
